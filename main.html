@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Sales</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <h1>Jual Tiket Online</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="main.html">Ticket</a>
+        <a href="#" id="cart-link">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+
+    <div class="container">
+        <h1>Available Tickets</h1>
+        <div class="ticket-section">
+            <!-- Ticket 1 -->
+            <div class="ticket-card">
+                <img src="concert.jpeg" alt="Concert">
+                <div class="ticket-info">
+                    <h3>Konser Malam</h3>
+                    <p>Jumat, 15 September</p>
+                    <p style="color: red;">Rp. 50.000</p>
+                    <a href="#" class="buy-btn">Buy Ticket</a>
+                </div>
+            </div>
+            <!-- Ticket 2 -->
+            <div class="ticket-card">
+                <img src="championship.jpeg" alt="Sports Event">
+                <div class="ticket-info">
+                    <h3>Liga Champion</h3>
+                    <p>Sabtu, 20 September</p>
+                    <p style="color: blue;">Rp. 75.000</p>
+                    <a href="#" class="buy-btn">Buy Ticket</a>
+                </div>
+            </div>
+            <!-- Ticket 3 -->
+            <div class="ticket-card">
+                <img src="theater.jpeg" alt="Theater Show">
+                <div class="ticket-info">
+                    <h3>Pertunjukan Teater</h3>
+                    <p>Minggu, 10 Oktober</p>
+                    <p style="font-weight: bold; color: green;">Rp. 100.000</p>
+                    <a href="#" class="buy-btn">Buy Ticket</a>
+                </div>
+            </div>
+            <!-- Ticket 4 -->
+            <div class="ticket-card">
+                <img src="movie.jpeg" alt="Movie Premiere">
+                <div class="ticket-info">
+                    <h3>Pemutaran Film Perdana</h3>
+                    <p>Kamis, 25 Oktober</p>
+                    <p style="color: purple;">Rp. 35.000</p>
+                    <a href="#" class="buy-btn">Buy Ticket</a>
+                </div>
+            </div>
+            <!-- Ticket 5 -->
+            <div class="ticket-card">
+                <img src="festival.jpeg" alt="Music Festival">
+                <div class="ticket-info">
+                    <h3>Festival Musik</h3>
+                    <p>Sabtu, 5 November</p>
+                    <p style="color: orange;">Rp. 60.000</p>
+                    <a href="#" class="buy-btn">Buy Ticket</a>
+                </div>
+            </div>
+            <!-- Ticket 6 -->
+            <div class="ticket-card">
+                <img src="comedy.jpeg" alt="Comedy Show">
+                <div class="ticket-info">
+                    <h3>Pertunjukan Komedi</h3>
+                    <p>Kamis, 12 November</p>
+                    <p style="color: darkblue;">Rp. 40.000</p>
+                    <a href="#" class="buy-btn">Buy Ticket</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Section (Floating) -->
+    <div id="cart-section">
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be inserted here dynamically -->
+        </ul>
+    </div>
+
+    <footer>
+        &copy; Website Ticket Sales
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
