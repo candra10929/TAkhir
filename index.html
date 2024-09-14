@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jual Ticket Online</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Slider specific styles */
+        .slider {
+            position: relative;
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            height: 300px; /* Set a fixed height for landscape images */
+        }
+    
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+    
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+            height: 100%; /* Ensure the height matches the slider */
+        }
+    
+        .slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container */
+            border-radius: 8px;
+        }
+    
+        .slider button {
+            position: absolute;
+            top: 50%;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 100;
+            border-radius: 50%;
+        }
+    
+        .prev {
+            left: 10px;
+        }
+    
+        .next {
+            right: 10px;
+        }
+    
+        .slider button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Online Ticket Sales</h1>
+    </header>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="main.html">Ticket</a>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to Our Ticket Sales Website</h1>
+        <p>Explore the best events and book your tickets with ease. Stay tuned for exciting updates!</p>
+    </div>
+
+    <!-- Slider Section -->
+    <div class="slider">
+        <div class="slides">
+            <img src="concert.jpeg" alt="Concert" class="slide">
+            <img src="championship.jpeg" alt="Sports Event" class="slide">
+            <img src="theater.jpeg" alt="Theater Show" class="slide">
+            <img src="movie.jpeg" alt="Movie Premiere" class="slide">
+            <img src="festival.jpeg" alt="Music Festival" class="slide">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+
+    <footer>
+        &copy; Website Ticket Sales
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+
+            if (index >= totalSlides) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = totalSlides - 1;
+            } else {
+                slideIndex = index;
+            }
+
+            const offset = -slideIndex * 100;
+            document.querySelector('.slides').style.transform = `translateX(${offset}%)`;
+        }
+
+        function moveSlide(step) {
+            showSlide(slideIndex + step);
+        }
+
+        // Initialize the slider
+        showSlide(slideIndex);
+    </script>
+</body>
+</html>
